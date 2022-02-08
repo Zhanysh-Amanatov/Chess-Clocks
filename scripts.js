@@ -14,20 +14,6 @@ const padZero = (number) => {
   return number;
 };
 
-//Warn the player if time drops below thirty seconds.
-const timeWarning = (player, min, sec) => {
-  //Change the numbers to red bellow 0 minutes and 30 seconds
-  if (min < 1 && sec <= 30) {
-    if (player === 1) {
-      document.querySelector(".player-1 .player__digits").style.color =
-        "#CC0000";
-    } else {
-      document.querySelector(".player-2 .player__digits").style.color =
-        "#CC0000";
-    }
-  }
-};
-
 //Create a class for the timer.
 class Timer {
   constructor(player, minutes) {
@@ -48,6 +34,20 @@ const swapPlayer = () => {
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   //Play the click sound.
   click.play();
+};
+
+//Warn the player if time drops below thirty seconds.
+const timeWarning = (player, min, sec) => {
+  //Change the numbers to red bellow 0 minutes and 30 seconds
+  if (min < 1 && sec <= 30) {
+    if (player === 1) {
+      document.querySelector(".player-1 .player__digits").style.color =
+        "#CC0000";
+    } else {
+      document.querySelector(".player-2 .player__digits").style.color =
+        "#CC0000";
+    }
+  }
 };
 
 //Start timer countdown to zero.
