@@ -66,6 +66,7 @@ const startTimer = () => {
           p1time.minutes = p1time.minutes - 1;
         }
         p1sec = p1sec - 1;
+        timeWarning(currentPlayer,p1time.minutes,p1sec);
         document.getElementById("sec1").textContent = padZero(p1sec);
         document.getElementById("min1").textContent = padZero(p1time.minutes);
         if (p1sec === 0) {
@@ -88,6 +89,7 @@ const startTimer = () => {
           p2time.minutes = p2time.minutes - 1;
         }
         p2sec = p2sec - 1;
+        timeWarning(currentPlayer,p2time.minutes,p1sec);
         document.getElementById("sec2").textContent = padZero(p2sec);
         document.getElementById("min2").textContent = padZero(p2time.minutes);
         if (p2sec === 0) {
