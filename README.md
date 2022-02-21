@@ -1,6 +1,6 @@
 # Chess clocks
 * javaScript chess clocks with sound effect on clock press.
-# https://chess-clocks.netlify.app/
+* LIVE https://chess-clocks.netlify.app/
 
 # Technologies used:
 * HTML
